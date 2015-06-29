@@ -1,0 +1,838 @@
+<robot
+  name="surus_sim">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="9.82193319266849E-08 -0.148833260016138 0.156634090644278"
+        rpy="0 0 0" />
+      <mass
+        value="4.88149894403649" />
+      <inertia
+        ixx="0.261848694573195"
+        ixy="-5.97878684396749E-07"
+        ixz="3.50817156323505E-07"
+        iyy="0.242019497800058"
+        iyz="-0.0511772435866289"
+        izz="0.320854825813323" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_top_link">
+    <inertial>
+      <origin
+        xyz="9.7470236984365E-06 -0.0099999998642917 0.0127031635553053"
+        rpy="0 0 0" />
+      <mass
+        value="0.221531862132748" />
+      <inertia
+        ixx="1.23672558056935E-05"
+        ixy="-3.22317463086043E-12"
+        ixz="1.4490750349923E-08"
+        iyy="0.00271813585004663"
+        iyz="2.51895441538164E-13"
+        izz="0.00271468493193684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_top_joint"
+    type="continuous">
+    <origin
+      xyz="0.206375 0.18732500000002 0.0811859999999602"
+      rpy="-1.5707963267949 -6.12303176911189E-17 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_top_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_vert_back_link">
+    <inertial>
+      <origin
+        xyz="1.31677898114971E-05 0.118452372698074 0.0508879429867681"
+        rpy="0 0 0" />
+      <mass
+        value="0.380720963545255" />
+      <inertia
+        ixx="0.00241154927917191"
+        ixy="4.34520360774505E-07"
+        ixz="9.45520964851515E-08"
+        iyy="0.000727662784614012"
+        iyz="0.000788556002308595"
+        izz="0.00174115566404689" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_vert_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_vert_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_vert_top_back_joint"
+    type="continuous">
+    <origin
+      xyz="0.177800000000035 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_top_link" />
+    <child
+      link="right_vert_back_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_mid_wheel">
+    <inertial>
+      <origin
+        xyz="2.72670774847938E-11 -3.83840945139546E-11 0.0766076583377891"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582713"
+        ixy="-2.96402876201474E-12"
+        ixz="2.67377176488536E-10"
+        iyy="0.0065886998158272"
+        iyz="1.89767801766998E-10"
+        izz="0.00854794820795915" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_mid_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_mid_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mid_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.000124999999984637 0.205138000000034 0.0258499999996897"
+      rpy="0 0 -1.17899991460401" />
+    <parent
+      link="right_vert_back_link" />
+    <child
+      link="right_mid_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_vert_front_link">
+    <inertial>
+      <origin
+        xyz="1.31677898289051E-05 0.118452372698434 0.0508879429867684"
+        rpy="0 0 0" />
+      <mass
+        value="0.380720963545255" />
+      <inertia
+        ixx="0.00241154927917196"
+        ixy="4.34520360778227E-07"
+        ixz="9.45520964883728E-08"
+        iyy="0.000727662784613814"
+        iyz="0.000788556002308602"
+        izz="0.00174115566404674" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_vert_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_vert_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_vert_top_front_joint"
+    type="continuous">
+    <origin
+      xyz="-0.177799999999981 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_top_link" />
+    <child
+      link="right_vert_front_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_front_wheel">
+    <inertial>
+      <origin
+        xyz="2.70902189569711E-11 -3.84988707580192E-11 0.0766076583377889"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582712"
+        ixy="-2.96428080235537E-12"
+        ixz="2.67377217853618E-10"
+        iyy="0.00658869981582719"
+        iyz="1.89767797836564E-10"
+        izz="0.00854794820795914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.000125000000000042 0.205138 0.0258499999996902"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="right_vert_front_link" />
+    <child
+      link="right_front_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_bot_link">
+    <inertial>
+      <origin
+        xyz="9.02039125473819E-05 -1.18182778425374E-06 0.0126880012263361"
+        rpy="0 0 0" />
+      <mass
+        value="0.431669670198118" />
+      <inertia
+        ixx="3.69944022478026E-05"
+        ixy="-1.50093043496301E-07"
+        ixz="-1.23836476995637E-07"
+        iyy="0.00497321992410225"
+        iyz="7.9505021700584E-09"
+        izz="0.00497491167813756" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_bot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/right_bot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bot_joint"
+    type="continuous">
+    <origin
+      xyz="0.206375 0.187325 0.014986"
+      rpy="1.5707963267949 6.12303176911189E-17 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_bot_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_top_link">
+    <inertial>
+      <origin
+        xyz="9.74702366940416E-06 -1.35766869968634E-10 -0.0127031635553051"
+        rpy="0 0 0" />
+      <mass
+        value="0.221531862132748" />
+      <inertia
+        ixx="1.23672558056936E-05"
+        ixy="3.22032868212492E-12"
+        ixz="-1.44907503503423E-08"
+        iyy="0.00271813585004663"
+        iyz="2.51895457132026E-13"
+        izz="0.00271468493193684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_top_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_top_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_top_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20638 0.18733 0.091186"
+      rpy="1.5708 6.123E-17 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_top_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_vert_back_link">
+    <inertial>
+      <origin
+        xyz="0.118723869954623 -0.0490372810033095 -0.0508879429867682"
+        rpy="0 0 0" />
+      <mass
+        value="0.380720963545255" />
+      <inertia
+        ixx="0.000972881728684984"
+        ixy="-0.000593960206080673"
+        ixz="-0.000728838954737058"
+        iyy="0.00216633033510108"
+        iyz="0.000301022184854895"
+        izz="0.00174115566404703" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_vert_back_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_vert_back_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_vert_back_top_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1778 0 0"
+      rpy="0 0 -1.179" />
+    <parent
+      link="left_top_link" />
+    <child
+      link="left_vert_back_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_mid_wheel">
+    <inertial>
+      <origin
+        xyz="2.70922867473544E-11 -3.83118536895211E-11 0.0766076583377893"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582717"
+        ixy="-2.9640285451743E-12"
+        ixz="2.67377170056209E-10"
+        iyy="0.00658869981582722"
+        iyz="1.89767798677059E-10"
+        izz="0.00854794820795918" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_mid_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_mid_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_mid_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.198883561596939 -0.0820347706495037 -0.0258499999996897"
+      rpy="3.14159265358979 0 -2.78551494975313" />
+    <parent
+      link="left_vert_back_link" />
+    <child
+      link="left_mid_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_vert_front_link">
+    <inertial>
+      <origin
+        xyz="-0.118723869954625 0.0390372810033101 -0.0508879429867681"
+        rpy="0 0 0" />
+      <mass
+        value="0.380720963545254" />
+      <inertia
+        ixx="0.000972881728684736"
+        ixy="-0.000593960206080778"
+        ixz="0.000728838954737056"
+        iyy="0.00216633033510103"
+        iyz="-0.000301022184854893"
+        izz="0.00174115566404674" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_vert_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_vert_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_vert_front_top_joint"
+    type="continuous">
+    <origin
+      xyz="0.16856 -0.0038185 0"
+      rpy="0 0 1.9626" />
+    <parent
+      link="left_top_link" />
+    <child
+      link="left_vert_front_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_front_wheel">
+    <inertial>
+      <origin
+        xyz="2.71475064650417E-11 3.83120896119138E-11 -0.0766076583377888"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582711"
+        ixy="2.96402792567821E-12"
+        ixz="-2.67376492703237E-10"
+        iyy="0.00658869981582718"
+        iyz="1.89767789967385E-10"
+        izz="0.0085479482079591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.19888 0.072035 -0.02585"
+      rpy="0 0 1.179" />
+    <parent
+      link="left_vert_front_link" />
+    <child
+      link="left_front_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_bot_link">
+    <inertial>
+      <origin
+        xyz="9.02039125482146E-05 -0.00999881817220523 -0.0126880012263361"
+        rpy="0 0 0" />
+      <mass
+        value="0.431669670198118" />
+      <inertia
+        ixx="3.69944022478023E-05"
+        ixy="1.50093038585745E-07"
+        ixz="1.23836476995717E-07"
+        iyy="0.00497321992410226"
+        iyz="7.95050216994382E-09"
+        izz="0.00497491167813756" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_bot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/left_bot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bot_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20638 0.18733 0.004986"
+      rpy="-1.5708 -6.123E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_bot_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_rocker_link">
+    <inertial>
+      <origin
+        xyz="0.0158749095083329 0.0360769167874748 -4.28546923511225E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.765248646616661" />
+      <inertia
+        ixx="0.0377415708032907"
+        ixy="-5.21372003273793E-09"
+        ixz="2.80741670333729E-06"
+        iyy="0.0358433223743838"
+        iyz="6.61444375881965E-10"
+        izz="0.00202108443551124" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_rocker_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_rocker_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_rocker_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.31433 0.004986"
+      rpy="-1.5708 -6.123E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_rocker_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="2.70899414012149E-11 -3.83117287894308E-11 0.0766076583377892"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582715"
+        ixy="-2.96427958259602E-12"
+        ixz="2.67377205678769E-10"
+        iyy="0.00658869981582722"
+        iyz="1.89767797888414E-10"
+        izz="0.0085479482079592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.016002 0.12183 0.23064"
+      rpy="-1.2246E-16 -6.123E-17 3.1416" />
+    <parent
+      link="rear_rocker_link" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.71471733981343E-11 -0.00999999996168797 -0.0766076583377888"
+        rpy="0 0 0" />
+      <mass
+        value="1.06272538271914" />
+      <inertia
+        ixx="0.00658869981582712"
+        ixy="2.96402925406297E-12"
+        ixz="-2.67376479017794E-10"
+        iyy="0.0065886998158272"
+        iyz="1.89767789582356E-10"
+        izz="0.00854794820795912" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surus_sim/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.015748 0.13183 -0.23064"
+      rpy="1.2246E-16 6.123E-17 0" />
+    <parent
+      link="rear_rocker_link" />
+    <child
+      link="rear_left_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

@@ -1,0 +1,852 @@
+<?xml verion='1.0'?>
+<sdf version='1.4'>
+  <model name='surus_sim'>
+    <pose>0.5 1 4 0 0 3.14</pose>
+    <link name='base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>9.82193e-08 0.156634 0.148833 0 -0 0</pose>
+        <mass>4.8815</mass>
+        <inertia>
+          <ixx>0.261849</ixx>
+          <ixy>3.50817e-07</ixy>
+          <ixz>5.97879e-07</ixz>
+          <iyy>0.320855</iyy>
+          <iyz>0.0511772</iyz>
+          <izz>0.242019</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+<!--
+            <uri>model://surus_sim/meshes/base_link.STL</uri>
+-->
+            <uri>model://meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/base_link/base_link.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <link name='left_bot_link'>
+      <pose>-0.206375 0.187325 0.014986 -1.5708 -5.55112e-17 -1.5708</pose>
+      <inertial>
+        <pose>9.02039e-05 1.18183e-06 -0.012688 0 -0 0</pose>
+        <mass>0.43167</mass>
+        <inertia>
+          <ixx>3.69944e-05</ixx>
+          <ixy>1.50093e-07</ixy>
+          <ixz>1.23836e-07</ixz>
+          <iyy>0.00497322</iyy>
+          <iyz>7.9505e-09</iyz>
+          <izz>0.00497491</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_bot_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_bot_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_bot_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_bot_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_bot_joint' type='revolute'>
+      <child>left_bot_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_top_link'>
+      <pose>-0.206375 0.187325 0.091186 1.5708 -5.55112e-17 1.5708</pose>
+      <inertial>
+        <pose>9.74702e-06 -1.35767e-10 -0.0127032 0 -0 0</pose>
+        <mass>0.221532</mass>
+        <inertia>
+          <ixx>1.23673e-05</ixx>
+          <ixy>3.22033e-12</ixy>
+          <ixz>-1.44908e-08</ixz>
+          <iyy>0.00271814</iyy>
+          <iyz>2.51895e-13</iyz>
+          <izz>0.00271468</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_top_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_top_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_top_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_top_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_top_link_joint' type='revolute'>
+      <child>left_top_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 -3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_vert_back_link'>
+      <pose>-0.206375 0.009525 0.091186 -1.5708 0 1.5708</pose>
+      <inertial>
+        <pose>0.118724 -0.0490373 -0.0508879 0 -0 0</pose>
+        <mass>0.380721</mass>
+        <inertia>
+          <ixx>0.000972882</ixx>
+          <ixy>-0.00059396</ixy>
+          <ixz>-0.000728839</ixz>
+          <iyy>0.00216633</iyy>
+          <iyz>0.000301022</iyz>
+          <izz>0.00174116</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_vert_back_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_vert_back_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_vert_back_top_joint' type='revolute'>
+      <child>left_vert_back_link</child>
+      <parent>left_top_link</parent>
+      <axis>
+        <xyz>-1 -3.60822e-15 3.75394e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_mid_wheel'>
+      <pose>-0.232225 0.00965 -0.123952 -1.5708 -0.822922 1.5708</pose>
+      <inertial>
+        <pose>2.70923e-11 -3.83119e-11 0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>-2.96403e-12</ixy>
+          <ixz>2.67377e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_mid_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_mid_wheel.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_mid_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_mid_wheel_joint' type='revolute'>
+      <child>left_mid_wheel</child>
+      <parent>left_vert_back_link</parent>
+      <axis>
+        <xyz>-1 -1.33227e-15 5.9952e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_vert_front_link'>
+      <pose>-0.206375 0.365125 0.091186 -1.5708 0 1.5708</pose>
+      <inertial>
+        <pose>-0.118724 0.0490373 -0.0508879 0 -0 0</pose>
+        <mass>0.380721</mass>
+        <inertia>
+          <ixx>0.000972882</ixx>
+          <ixy>-0.00059396</ixy>
+          <ixz>0.000728839</ixz>
+          <iyy>0.00216633</iyy>
+          <iyz>-0.000301022</iyz>
+          <izz>0.00174116</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_vert_front_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+	    <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_vert_front_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_vert_front_top_joint' type='revolute'>
+      <child>left_vert_front_link</child>
+      <parent>left_top_link</parent>
+      <axis>
+        <xyz>-1 -3.63598e-15 3.77476e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_front_wheel'>
+      <pose>-0.232225 0.36525 -0.123952 -1.5708 -3.10862e-15 1.5708</pose>
+      <inertial>
+        <pose>2.71474e-11 3.83121e-11 -0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>2.96403e-12</ixy>
+          <ixz>-2.67376e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_front_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/left_front_wheel.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_front_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='left_front_wheel_joint' type='revolute'>
+      <child>left_front_wheel</child>
+      <parent>left_vert_front_link</parent>
+      <axis>
+        <xyz>-1 -3.66374e-15 3.83027e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='rear_rocker_link'>
+      <pose>0 -0.311013 0.014986 -1.5708 -5.55112e-17 -1.5708</pose>
+      <inertial>
+        <pose>0.0191873 0.049316 -4.21302e-12 0 -0 0</pose>
+        <mass>0.778383</mass>
+        <inertia>
+          <ixx>0.0385677</ixx>
+          <ixy>-5.49053e-09</ixy>
+          <ixz>2.80742e-06</ixz>
+          <iyy>0.0364122</iyy>
+          <iyz>6.61432e-10</iyz>
+          <izz>0.00228047</izz>
+        </inertia>
+      </inertial>
+      <collision name='rear_rocker_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/rear_rocker_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rear_rocker_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/rear_rocker_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='rear_rocker_joint' type='revolute'>
+      <child>rear_rocker_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>3.60822e-15 1 -5.55112e-17</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='rear_left_wheel_link'>
+      <pose>-0.22905 -0.330073 -0.123952 -1.5708 -5.55112e-17 1.5708</pose>
+      <inertial>
+        <pose>2.71476e-11 3.8312e-11 -0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>2.96403e-12</ixy>
+          <ixz>-2.67376e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='rear_left_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/rear_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rear_left_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='rear_left_wheel_joint' type='revolute'>
+      <child>rear_left_wheel_link</child>
+      <parent>rear_rocker_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.4972e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='rear_right_wheel'>
+      <pose>0.22905 -0.330327 -0.123952 1.5708 3.27516e-15 1.5708</pose>
+      <inertial>
+        <pose>2.70903e-11 -3.83118e-11 0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>-2.96428e-12</ixy>
+          <ixz>2.67377e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='rear_right_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/rear_right_wheel.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rear_right_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='rear_right_wheel_joint' type='revolute'>
+      <child>rear_right_wheel</child>
+      <parent>rear_rocker_link</parent>
+      <axis>
+        <xyz>-1 3.69149e-15 3.4972e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_bot_link'>
+      <pose>0.206375 0.187325 0.014986 1.5708 -5.55112e-17 1.5708</pose>
+      <inertial>
+        <pose>9.02039e-05 -1.18183e-06 0.012688 0 -0 0</pose>
+        <mass>0.43167</mass>
+        <inertia>
+          <ixx>3.69944e-05</ixx>
+          <ixy>-1.50093e-07</ixy>
+          <ixz>-1.23836e-07</ixz>
+          <iyy>0.00497322</iyy>
+          <iyz>7.9505e-09</iyz>
+          <izz>0.00497491</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_bot_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_bot_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_bot_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_bot_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='right_bot_joint' type='revolute'>
+      <child>right_bot_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 -3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_top_link'>
+      <pose>0.206375 0.187325 0.091186 -1.5708 -5.55112e-17 -1.5708</pose>
+      <inertial>
+        <pose>9.74702e-06 1.35777e-10 0.0127032 0 -0 0</pose>
+        <mass>0.221532</mass>
+        <inertia>
+          <ixx>1.23673e-05</ixx>
+          <ixy>-3.22602e-12</ixy>
+          <ixz>1.44908e-08</ixz>
+          <iyy>0.00271814</iyy>
+          <iyz>2.51895e-13</iyz>
+          <izz>0.00271468</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_top_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_top_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_top_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_top_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='right_top_joint' type='revolute'>
+      <child>right_top_link</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_vert_back_link'>
+      <pose>0.206375 0.009525 0.091186 -1.5708 -5.55112e-17 -1.5708</pose>
+      <inertial>
+        <pose>1.31678e-05 0.128452 0.0508879 0 -0 0</pose>
+        <mass>0.380721</mass>
+        <inertia>
+          <ixx>0.00241155</ixx>
+          <ixy>4.3452e-07</ixy>
+          <ixz>9.45521e-08</ixz>
+          <iyy>0.000727663</iyy>
+          <iyz>0.000788556</iyz>
+          <izz>0.00174116</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_vert_back_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_vert_back_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_back_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='right_vert_top_back_joint' type='revolute'>
+      <child>right_vert_back_link</child>
+      <parent>right_top_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_mid_wheel'>
+      <pose>0.232225 0.0094 -0.123952 -1.5708 -1.179 -1.5708</pose>
+      <inertial>
+        <pose>2.69724e-11 -3.8262e-11 0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>-2.96403e-12</ixy>
+          <ixz>2.67377e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_mid_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_mid_wheel.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_mid_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='mid_wheel_joint' type='revolute'>
+      <child>right_mid_wheel</child>
+      <parent>right_vert_back_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_vert_front_link'>
+      <pose>0.206375 0.365125 0.091186 -1.5708 -5.55112e-17 -1.5708</pose>
+      <inertial>
+        <pose>1.31678e-05 0.128452 0.0508879 0 -0 0</pose>
+        <mass>0.380721</mass>
+        <inertia>
+          <ixx>0.00241155</ixx>
+          <ixy>4.3452e-07</ixy>
+          <ixz>9.45521e-08</ixz>
+          <iyy>0.000727663</iyy>
+          <iyz>0.000788556</iyz>
+          <izz>0.00174116</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_vert_front_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_front_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_vert_front_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_vert_front_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='right_vert_top_front_joint' type='revolute'>
+      <child>right_vert_front_link</child>
+      <parent>right_top_link</parent>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='right_front_wheel'>
+      <pose>0.232225 0.365 -0.123952 1.5708 3.27516e-15 1.5708</pose>
+      <inertial>
+        <pose>2.70902e-11 -3.81492e-11 0.0766077 0 -0 0</pose>
+        <mass>1.06273</mass>
+        <inertia>
+          <ixx>0.0065887</ixx>
+          <ixy>-2.96428e-12</ixy>
+          <ixz>2.67377e-10</ixz>
+          <iyy>0.0065887</iyy>
+          <iyz>1.89768e-10</iyz>
+          <izz>0.00854795</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_front_wheel_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/right_front_wheel.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_front_wheel_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://surus_sim/meshes/wheels/all_right_wheels/right_wheel.DAE</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='right_front_wheel_joint' type='revolute'>
+      <child>right_front_wheel</child>
+      <parent>right_vert_front_link</parent>
+      <axis>
+        <xyz>-1 3.66374e-15 3.69149e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+    <joint name='right_vert_bot_front_joint' type='revolute'>
+      <child>right_vert_front_link</child>
+      <parent>right_bot_link</parent>
+      <pose>0 0.0762 0 0 0 0</pose>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+    <joint name='right_vert_bot_back_joint' type='revolute'>
+      <child>right_vert_back_link</child>
+      <parent>right_bot_link</parent>
+      <pose>0 0.0762 0 0 0 0</pose>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+    <joint name='left_vert_bot_front_joint' type='revolute'>
+      <child>left_vert_front_link</child>
+      <parent>left_bot_link</parent>
+      <pose>0 0.0762 0 0 0 0</pose>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+    <joint name='left_vert_bot_back_joint' type='revolute'>
+      <child>left_vert_back_link</child>
+      <parent>left_bot_link</parent>
+      <pose>0 0.0762 0 0 0 0</pose>
+      <axis>
+        <xyz>-1 3.60822e-15 3.60822e-15</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+
+    <plugin name="hector_6w_diff_controller" filename="libdiffdrive_plugin_6w.so">
+            <alwaysOn>1</alwaysOn>
+            <updateRate>10.0</updateRate>
+            <wheelSeparation>0.5116</wheelSeparation>
+            <wheelDiameter>0.2191</wheelDiameter>
+            <torque>35</torque>
+	    <frontLeftJoint>left_front_wheel_joint</frontLeftJoint>
+            <frontRightJoint>right_front_wheel_joint</frontRightJoint>
+            <midLeftJoint>left_mid_wheel_joint</midLeftJoint>
+            <midRightJoint>mid_wheel_joint</midRightJoint>
+            <rearLeftJoint>rear_left_wheel_joint</rearLeftJoint>
+            <rearRightJoint>rear_right_wheel_joint</rearRightJoint>
+    </plugin>
+
+  </model>
+</sdf>
